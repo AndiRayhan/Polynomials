@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-public class polynomial//what is this
+public class polynomial
 {
   //double polyCoefficient;
   //double polyPower;
