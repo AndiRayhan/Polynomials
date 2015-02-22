@@ -27,8 +27,8 @@ public class polynomial//what is this
     return result;
   }
   
-	
-  public void simplify()//simplifying polynomials n stuff
+	//simplifying polynomials -- variables of the same degree will have their coefficients added
+  public void simplify()
   {
     for(int i=0;i<this.xVars.size();i++)
     {
@@ -44,6 +44,8 @@ public class polynomial//what is this
     }
   }
   
+  //sort the xVariable objects in the arraylist of xVariable objects in the polynomial
+  //mostly for appearance purposes only
   public void sort()
   {
     if(this.xVars.size()>1)
@@ -62,10 +64,11 @@ public class polynomial//what is this
     }
   }
   
+  
+  //Parse user input, create new xVariable objects and export them into an already-existing polynomial object
   public void stringToPolynomial(String s)
   {
     s = s.replace(" ","");
-    //System.out.println(s);
     
     for(int i=0;i<s.length();i++)
     {
@@ -74,10 +77,8 @@ public class polynomial//what is this
         continue;
       }
       String result = "";
-      //System.out.println('-'+"="+s.charAt(i) + ('-'== s.charAt(i)));
       if(s.charAt(i)=='-' && i <=s.length()-1)
       {
-        //System.out.println("true");
         result+="-";
         i++;
       }
@@ -92,27 +93,28 @@ public class polynomial//what is this
         
       }
       i--;
-      //System.out.println(result);
       Xvariable myX = new Xvariable();
       this.xVars.add(myX.stringToX(result));
       
       
     }
-    //return toReturn;
   }
+  
+  
+  //differentiate a polynomial by executing the differentiate() method on each of the xVariable objects
   public void differentiate()
   {
-    //polynomial mypoli = new polynomial();
     for(int i=0;i<this.xVars.size();i++)
     {
       this.xVars.get(i).differentiate();
       //mypoli.xVars.add(this.xVars.get(i));
     }
-    //return mypoli;
     this.sort();
     this.simplify();
   }
   
+  
+  //Indefinite integral - will change method name
   public String defIntegrate()
   {
     for(int i=0;i<this.xVars.size();i++)
@@ -122,6 +124,8 @@ public class polynomial//what is this
     return this.toString()+" + c";
   }
   
+  
+  //definite integral
   public double integrate(double lower, double upper)
   {
     polynomial intPoly = new polynomial();
@@ -141,7 +145,7 @@ public class polynomial//what is this
     return b-a;
   }
   
-  
+  //toString method of polynomial
   public String toString()
   {
     String result = "";
