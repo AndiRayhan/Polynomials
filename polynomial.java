@@ -5,7 +5,7 @@ public class polynomial//what is this
   //double polyCoefficient;
   //double polyPower;
   //ArrayList<polynomial> polys;
-  ArrayList<Xvariable> xVars = new ArrayList<Xvariable>();
+  ArrayList<Xvariable> xVars = new ArrayList<Xvariable>();//what is this what is this
   
   public polynomial addition(polynomial p)
   {
