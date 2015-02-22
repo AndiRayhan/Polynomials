@@ -27,7 +27,8 @@ public class polynomial//what is this
     return result;
   }
   
-  public void simplify()
+	
+  public void simplify()//simplifying polynomials
   {
     for(int i=0;i<this.xVars.size();i++)
     {
