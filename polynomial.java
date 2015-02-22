@@ -7,6 +7,7 @@ public class polynomial//what is this
   //ArrayList<polynomial> polys;
   ArrayList<Xvariable> xVars = new ArrayList<Xvariable>();//what is this what is this
   
+  //adding two polynomials
   public polynomial addition(polynomial p)
   {
     polynomial result = new polynomial();
