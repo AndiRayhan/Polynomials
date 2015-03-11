@@ -1,8 +1,8 @@
 import java.util.Scanner;//change
 public class Xvariable
 {
-  double coefficient;
-  double power;
+  double coefficient; //coefficient of the variable
+  double power; //power of the variable
   
   public Xvariable()
   {

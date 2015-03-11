@@ -145,7 +145,7 @@ public class polynomial
     return b-a;
   }
   
-  //toString method of polynomial
+  //toString method of polynomial.
   public String toString()
   {
     String result = "";
