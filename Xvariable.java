@@ -10,7 +10,7 @@ public class Xvariable
     this.power = 0;
   }
   
-  
+  //constructor for the variable
   public Xvariable(double c, double p)
   {
     this.coefficient = c;
