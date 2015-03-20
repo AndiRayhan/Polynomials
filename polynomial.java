@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Polynomial {
  ArrayList<Variable> variables = new ArrayList<>();
    
-//extra
+//commenting
    public Polynomial addition(Polynomial p)
    {
      Polynomial result = new Polynomial();
